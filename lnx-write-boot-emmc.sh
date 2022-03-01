@@ -1,6 +1,11 @@
 #!/bin/bash
 
-wdir=/boot/firmware/
+if [ -z "$1" ]; then
+	wdir=`pwd`/deploy
+else
+	wdir=$1
+fi
+
 if [ -d ${wdir} ] ; then
 	set -x
 	mmc bootpart enable 1 2 /dev/mmcblk0
