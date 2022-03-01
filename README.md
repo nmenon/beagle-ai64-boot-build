@@ -39,3 +39,12 @@ Compiler: https://developer.arm.com/tools-and-software/open-source-software/deve
 make CROSS_COMPILE_64=aarch64-none-linux-gnu- CROSS_COMPILE_32=arm-none-linux-gnueabihf- -j`nproc`
 ```
 
+Flashing to emmc:
+=================
+
+Either copy the lnx-write-boot-emmc.sh and deploy folder to beagle-ai64 target OR
+if you are building natively, then it is straightforward..
+
+```
+sudo ./lnx-write-boot-emmc.sh ./deploy
+```
