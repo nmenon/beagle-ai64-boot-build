@@ -18,10 +18,10 @@ VERBOSE ?= 0
 Q := $(if $(VERBOSE:1=),@)
 
 # 64bit Defaults
-CROSS_COMPILE_64 ?= aarch64-none-linux-gnu-
+CROSS_COMPILE_64 ?= aarch64-linux-gnu-
 
 # 32bit Defaults
-CROSS_COMPILE_32 ?= arm-none-linux-gnueabihf-
+CROSS_COMPILE_32 ?= arm-linux-gnueabihf-
 
 all: k3imggen u_boot
 	$(Q)echo "Beagle-AI64 bootloader build Complete"
