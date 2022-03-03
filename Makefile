@@ -51,7 +51,7 @@ u_boot_armv8: $(O) $(D) optee tfa
 	$(Q)$(MAKE) -C u-boot CROSS_COMPILE=$(CROSS_COMPILE_64) ARCH=arm O=$(O)/u-boot/armv8 \
 				  ATF=$(I)/bl31.bin \
 				  TEE=$(I)/tee-pager_v2.bin \
-				  DM=$(abspath u-boot/bb-u-boot-j721e-evm/ipc_echo_testb_mcu1_0_release_strip.xer5f)
+				  DM=$(abspath u-boot/ti-blobs/ipc_echo_testb_mcu1_0_release_strip.xer5f)
 	$(Q) cp -v $(O)/u-boot/armv8/tispl.bin $(D)
 	$(Q) cp -v $(O)/u-boot/armv8/u-boot.img $(D)
 
