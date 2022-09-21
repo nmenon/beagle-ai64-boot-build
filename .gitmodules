@@ -1,12 +1,12 @@
 [submodule "u-boot"]
 	path = u-boot
-	url = https://github.com/beagleboard/u-boot
+	url = https://git.beagleboard.org/beagleboard/u-boot.git
 [submodule "arm-trusted-firmware"]
 	path = arm-trusted-firmware
-	url = https://github.com/beagleboard/arm-trusted-firmware
+	url = https://git.beagleboard.org/beagleboard/arm-trusted-firmware.git
 [submodule "k3-image-gen"]
 	path = k3-image-gen
-	url = https://github.com/beagleboard/k3-image-gen
+	url = https://git.beagleboard.org/beagleboard/k3-image-gen.git
 [submodule "optee_os"]
 	path = optee_os
-	url = https://github.com/beagleboard/optee_os
+	url = https://git.beagleboard.org/beagleboard/optee_os.git
