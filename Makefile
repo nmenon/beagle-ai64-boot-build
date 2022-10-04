@@ -30,7 +30,8 @@ all: k3imggen u_boot
 k3imggen: $(O) $(D)
 	$(Q)cd k3-image-gen &&\
 	    $(MAKE) SOC=j721e CONFIG=evm CROSS_COMPILE=$(CROSS_COMPILE_32) O=$(O)/k3-img-gen mrproper && \
-	    $(MAKE) SOC=j721e CONFIG=evm CROSS_COMPILE=$(CROSS_COMPILE_32) O=$(O)/k3-img-gen && \
+	    $(MAKE) SOC=j721e CONFIG=evm CROSS_COMPILE=$(CROSS_COMPILE_32) O=$(O)/k3-img-gen \
+	    SYSFW_PATH=$(abspath ti-linux-firmware/ti-sysfw/ti-fs-firmware-j721e-gp.bin)&& \
 	    cp -v sysfw.itb $(D)
 
 tfa: $(O) $(I)
@@ -51,7 +52,7 @@ u_boot_armv8: $(O) $(D) optee tfa
 	$(Q)$(MAKE) -C u-boot CROSS_COMPILE=$(CROSS_COMPILE_64) ARCH=arm O=$(O)/u-boot/armv8 \
 				  ATF=$(I)/bl31.bin \
 				  TEE=$(I)/tee-pager_v2.bin \
-				  DM=$(abspath u-boot/ti-blobs/ipc_echo_testb_mcu1_0_release_strip.xer5f)
+				  DM=$(abspath ti-linux-firmware/ti-dm/j721e/ipc_echo_testb_mcu1_0_release_strip.xer5f)
 	$(Q) cp -v $(O)/u-boot/armv8/tispl.bin $(D)
 	$(Q) cp -v $(O)/u-boot/armv8/u-boot.img $(D)
 
