@@ -1,6 +1,7 @@
 [submodule "u-boot"]
 	path = u-boot
 	url = https://git.beagleboard.org/beagleboard/u-boot.git
+	branch = v2021.01-ti-08.01.00.006
 [submodule "arm-trusted-firmware"]
 	path = arm-trusted-firmware
 	url = https://git.beagleboard.org/beagleboard/arm-trusted-firmware.git
